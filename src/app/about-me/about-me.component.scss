@@ -48,7 +48,7 @@
     align-items: center;
     gap: 1rem;
     margin-right: 10rem;
-    margin-bottom: 13.8rem;
+    margin-bottom: 12.3rem;
 
     button{
       padding:1.5rem 3rem;
@@ -58,9 +58,30 @@
       font-size: 2.3rem;
       background-color: transparent;
       color: var(--main-color);
+
+      &:hover{
+        animation: buttonAnimation 3s forwards;
+        color:white;
+        cursor: pointer;
+      }
     }
   }
 
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      background: linear-gradient(105deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFF 33.64%, #FFF 39.44%, #FFF 90.08%);
+    }
+    33.33%{
+      background: linear-gradient(104deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFF 64.83%, #FFF 67.43%, #FFF 90.18%);
+    }
+    66.66% {
+      background: var(--style-2-style-2-blue-gr, radial-gradient(91.12% 91.12% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%));
+    }
+    100% {
+      background: #0043F0;
+    }
   }
 
 
