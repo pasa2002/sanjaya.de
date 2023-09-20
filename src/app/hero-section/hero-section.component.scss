@@ -1,0 +1,105 @@
+.bg-bubble {
+  img {
+    position: absolute;
+    top: -10rem;
+    left: -7rem;
+    z-index: -1;
+    scale: 2;
+    object-fit: cover;
+  }
+}
+
+.hero-section {
+  padding-left: 10rem;
+  padding-right: 8.7rem;
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 2.5rem;
+    width: 6.9rem;
+
+    .github, .linkedin {
+      margin-right: 1rem
+    }
+
+    img{
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .linkedin {
+      margin-bottom: 6.4rem;
+    }
+
+    img {
+      &:hover {
+        transform: translateX(-2rem);
+      }
+    }
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: end;
+
+  .pp-image {
+    height: 113.43rem;
+    object-fit: cover;
+    position: absolute;
+    left: 10%;
+  }
+
+  .hero-section-text {
+    color: var(--main-color);
+    margin-top: 10.2rem;
+
+    span {
+      font-size: 2.3rem;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 11.25rem;
+
+      span {
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.vl {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 52.6rem;
+  }
+}
+
+.fs-64 {
+  font-size: 6.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fs-128 {
+  font-size: 12.8rem;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  margin-top: -4rem;
+}
+
+.fs-118 {
+  font-size: 11.8rem;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  margin-top: -8rem;
+}
