@@ -9,14 +9,21 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding-left: 10rem;
   padding-right: 10rem;
+  margin-top: 2.4rem;
+
 
   img{
     margin-top: 2.3rem;
     margin-bottom: 2.3rem;
+    position: absolute;
+    left: 10rem;
+    // top: ;
+    z-index: 3;
+
   }
   .links {
     display: flex;

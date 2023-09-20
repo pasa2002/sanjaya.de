@@ -1,0 +1,67 @@
+.about-me{
+  margin-left: 9.2rem;
+  margin-right: 9.6rem;
+  .bubble-one {
+      margin-top: -34rem;
+      z-index: 4;
+      position: absolute;
+      top: 125rem;
+      left: 50%;
+  }
+
+  .bubble-two{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 110rem;
+  }
+
+  .about-me-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2{
+      font-family: 'Baloo 2', cursive;
+      font-size: 12.1rem;
+      font-weight: 800;
+      color:var(--main-color);
+      max-width: 60.6rem;
+    }
+
+    p{
+      max-width: 51.7rem;
+      font-size:2.3rem;
+    }
+
+    .content-two-div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:2.8rem;
+
+    }
+  }
+
+  .contact-btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 10rem;
+    margin-bottom: 13.8rem;
+
+    button{
+      padding:1.5rem 3rem;
+      border-radius: 1rem;
+      border: 2px solid var(--main-color);
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      font-size: 2.3rem;
+      background-color: transparent;
+      color: var(--main-color);
+    }
+  }
+
+  }
+
+
+

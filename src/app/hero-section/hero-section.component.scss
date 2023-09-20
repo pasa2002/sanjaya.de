@@ -3,8 +3,8 @@
     position: absolute;
     top: -10rem;
     left: -7rem;
-    z-index: -1;
-    scale: 2;
+    z-index: 1;
+    scale: 1.5;
     object-fit: cover;
   }
 }
@@ -46,10 +46,11 @@
   justify-content: end;
 
   .pp-image {
-    height: 113.43rem;
+    height: 94.7rem;
     object-fit: cover;
     position: absolute;
     left: 10%;
+    z-index: 2;
   }
 
   .hero-section-text {
@@ -81,7 +82,7 @@
   align-items: center;
 
   img {
-    height: 52.6rem;
+    height: 33.6rem;
   }
 }
 
