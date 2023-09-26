@@ -1,0 +1,99 @@
+<!--
+  <section class="contact-me">
+  <h1 class="contact-header">
+    Contact
+  </h1>
+
+  <div class="contact-container">
+    <div class="left-side">
+      <h3>
+        Got a problem to solve?
+      </h3>
+      <span>
+        Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.
+      </span>
+      <p>
+        Need a Frontend developer? <b>Contact me!</b>
+      </p>
+    </div>
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+  </div>
+</section>
+
+
+import {Component} from '@angular/core';
+import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgIf} from '@angular/common';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+@Component({
+  selector: 'app-contact-me',
+  templateUrl: './contact-me.component.html',
+  styleUrls: ['./contact-me.component.scss'],
+  standalone: true,
+  imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, NgIf],
+})
+export class ContactMeComponent {
+
+
+  constructor() {};
+
+      email = new FormControl('', [Validators.required, Validators.email]);
+
+    getErrorMessage() {
+      if (this.email.hasError('required')) {
+        return 'You must enter a value';
+      }
+
+      return this.email.hasError('email') ? 'Not a valid email' : '';
+    }
+}
+
+
+
+section{
+
+  padding-left: 10rem;
+  padding-right: 8.7rem;
+  background: linear-gradient(180deg, #FFF 12.89%, #EAF0FF 91.39%);
+  h1{
+    font-family: var(--baloo);
+    font-size: 9rem;
+    color: var(--main-color);
+    margin-bottom: 8.5rem;
+  }
+  h3{
+    font-family: var(--montserrat);
+    font-size: 3.2rem;
+    color: var(--main-color);
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+  }
+  span{
+    font-family: var(--montserrat);
+    font-size: 1.6rem;
+    display: flex;
+    max-width: 47.3rem;
+  }
+  p{
+    font-family: var(--montserrat);
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-top: 2.5rem;
+    b{
+      font-family: var(--baloo);
+      font-size: 1.6rem;
+      color: var(--main-color);
+    }
+  }
+}
+
+ -->

@@ -7,13 +7,18 @@
   }
 }
 
-header {
+header{
+  background-color: var(--background-color);
+}
+
+.header-class {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding-left: 10rem;
   padding-right: 10rem;
   margin-top: 2.4rem;
+
 
 
   img{

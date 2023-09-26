@@ -1,0 +1,31 @@
+<section class="projects">
+  <h2 class="project-header">
+    My work
+  </h2>
+
+  <div class="mb-102">
+    <span>
+      This page is a sample of my work - please feel free to try them out.
+    </span>
+  </div>
+
+  <div class="project-display" *ngFor="let project of project_json; let i = index" [ngClass]="{'row-reverse': i % 2 !== 0}">
+    <img [src]="project.image" alt="{{ project.title }}">
+    <div class="project-detail">
+      <h3 class="title">
+        {{ project.title }}
+      </h3>
+      <span class="language-used">
+        {{ project.skill }}
+      </span>
+      <p>
+        {{ project.description }}
+      </p>
+      <div class="link-button">
+        <button>{{ project['button-one'] }}</button>
+        <button>{{ project['button-two'] }}</button>
+      </div>
+    </div>
+  </div>
+
+</section>

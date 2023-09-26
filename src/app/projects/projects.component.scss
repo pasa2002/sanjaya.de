@@ -1,0 +1,147 @@
+.projects {
+  position: relative;
+  padding-left: 10rem;
+  padding-right: 8.7rem;
+
+  h2 {
+    font-size: 9.6rem;
+    font-family: 'Baloo 2', cursive;
+    color: var(--main-color);
+  }
+
+  span {
+    font-family: var(--montserrat);
+    font-size: 2.3rem;
+    max-width: 67.3rem;
+  }
+
+  .project-display {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 14.3rem;
+
+    img {
+      max-width: 62rem;
+      max-height: 39.3rem;
+      padding: 1rem 0;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+    }
+
+    .project-detail {
+      max-width: 53.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      h3 {
+        font-family: var(--baloo);
+        font-size: 4.5rem;
+        color: var(--main-color);
+        font-weight: 900;
+      }
+
+      .language-used {
+        font-family: var(--montserrat);
+        font-size: 2.3rem;
+        color: var(--main-color);
+      }
+
+      p {
+        font-family: var(--montserrat);
+        font-size: 1.6rem;
+      }
+
+      .link-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          padding: 15px 30px;
+          background: transparent;
+          border: 2px solid var(--main-color);
+          border-radius: 1rem;
+          box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+          font-family: var(--poppins);
+          font-size: 2.3rem;
+          color: var(--main-color);
+
+          &:hover {
+            animation: smoothBackgroundChange 775ms forwards;
+            cursor: pointer;
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes smoothBackgroundChange {
+  0% {
+    background: transparent;
+  }
+  20% {
+    background: linear-gradient(
+      105deg,
+      #5988ff -90.22%,
+      #5988ff -49.45%,
+      #0043f0 27.88%,
+      #fff 33.64%,
+      #fff 39.44%,
+      #fff 90.08%
+    );
+  }
+  40% {
+    background: linear-gradient(
+      104deg,
+      #5988ff 9.21%,
+      #5988ff 27.52%,
+      #0043f0 62.24%,
+      #fff 64.83%,
+      #fff 67.43%,
+      #fff 90.18%
+    );
+  }
+  60% {
+    background: var(
+      --main-color,
+      radial-gradient(
+        91.12% 91.12% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      )
+    );
+  }
+  80% {
+    background: #0043f0;
+  }
+  100% {
+    background: #0043f0;
+  }
+}
+
+.mb-102 {
+  margin-bottom: 10.2rem;
+}
+
+.project-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-display.row-reverse {
+  flex-direction: row-reverse;
+}
