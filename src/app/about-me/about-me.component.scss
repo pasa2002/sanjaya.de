@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    h2{
+    h2,b{
       font-family: 'Baloo 2', cursive;
       font-size: 12.1rem;
       font-weight: 800;
@@ -69,6 +69,79 @@
 
   }
 
+  @media only screen and (max-width:1520px) {
+
+    .bubble-one{
+      scale:0.6;
+      margin-top: -42rem !important;
+    }
+
+  }
+
+  @media only screen and (max-width:1180px) {
+
+    .bubble-one{
+      margin-top: -47rem !important;
+    }
+
+  }
+
+  @media only screen and (max-width:1230px) {
+
+    .about-me-content{
+      h2,b{
+        font-size:9.1rem !important;
+      }
+    }
+
+  }
+
+  @media only screen and (max-width:1100px) {
+
+    .about-me-content{
+      h2,b{
+        font-size:7.1rem !important;
+      }
+      p{
+        font-size: 1.7rem !important;
+      }
+    }
+
+  }
+  @media only screen and (max-width:1000px) {
+
+    .about-me-content{
+      b{
+        font-size:6.1rem !important;
+      }
+
+    }
+
+  }
+
+  @media only screen and (max-width:980px) {
+
+    .about-me-content{
+      flex-direction: column;
+      gap: 3rem;
+
+      p{
+        max-width: unset !important;
+        text-align: center;
+      }
+    }
+
+    .contact-btn{
+      justify-content: center !important;
+      margin-top: 3rem;
+      margin-right: unset !important;
+      gap: unset !important;
+    }
+
+  }
+
+
+
   @keyframes buttonAnimation {
     0% {
       background: linear-gradient(105deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFF 33.64%, #FFF 39.44%, #FFF 90.08%);
@@ -83,6 +156,5 @@
       background: #0043F0;
     }
   }
-
 
 

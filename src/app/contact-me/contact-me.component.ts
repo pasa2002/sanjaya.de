@@ -1,21 +1,11 @@
-import {Component} from '@angular/core';
-import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgIf} from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss'],
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, NgIf],
+  styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
-
-
-  constructor() {};
-
     email = new FormControl('', [Validators.required, Validators.email]);
 
     getErrorMessage() {
@@ -25,5 +15,4 @@ export class ContactMeComponent {
 
       return this.email.hasError('email') ? 'Not a valid email' : '';
     }
-}
-
+  }

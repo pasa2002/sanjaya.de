@@ -28,7 +28,8 @@
       flex-direction: column;
       align-items: center;
       min-width: 9rem;
-      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Use a cubic-bezier easing for the animation */
+      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-top: 2rem;
 
       &:hover {
         font-weight: 700;

@@ -1,11 +1,26 @@
 <header>
-  <div class="header-class">
-    <img src="../../assets/icons/logo.svg" href="#">
+  <div class="logo-wrapper">
+    <img src="../../assets/icons/logo.svg" alt="">
+  </div>
 
-    <div class="links">
-      <a routerLink="/about-me">About me</a>
-      <a routerLink="/skill-set">Skill set</a>
-      <a routerLink="/my-work">My work</a>
-    </div>
+
+  <div class="big-screen-menu">
+    <a href="">About me</a>
+    <a href="">Skill Set</a>
+    <a href="">My work</a>
+    <a href="">Contact</a>
+  </div>
+
+  <div [class.active]="isActive" class="menu-element">
+    <a href="#" [class.active]="isActive">About me</a>
+    <a href="#" [class.active]="isActive">Skill Set</a>
+    <a href="#" [class.active]="isActive">My work</a>
+    <a href="#" [class.active]="isActive">Contact</a>
+  </div>
+
+  <div class="menu-wrapper" (click)="toggleMenu()">
+    <div [class.active]="isActive" class="menu-line line1"></div>
+    <div [class.active]="isActive" class="menu-line line2"></div>
+    <div [class.active]="isActive" class="menu-line line3"></div>
   </div>
 </header>

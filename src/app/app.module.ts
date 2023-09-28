@@ -8,11 +8,13 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -24,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
     AboutMeComponent,
     SkillsComponent,
     ProjectsComponent,
+    ContactMeComponent,
 
   ],
   imports: [
@@ -31,7 +34,10 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
