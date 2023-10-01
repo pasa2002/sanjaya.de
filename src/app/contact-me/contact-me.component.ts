@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators , FormGroup , FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
-export class ContactMeComponent {
-    email = new FormControl('', [Validators.required, Validators.email]);
+export class ContactMeComponent implements OnInit{
 
-    getErrorMessage() {
-      if (this.email.hasError('required')) {
-        return 'You must enter a value';
-      }
+    form: FormGroup;
+    constructor(private fb: FormBuilder){};
 
-      return this.email.hasError('email') ? 'Not a valid email' : '';
+    ngOnInit(): void {
+        this.form = this.fb.group ({
+          name : ['',Validators.required],
+          email  :['',[Validators.required, Validators.email]],
+          message: ['',Validators.required]
+        });
     }
+    get name() { return this.form.get('name'); }
+    get email() { return this.form.get('email'); }
+    get message() { return this.form.get('message'); }
   }

@@ -17,8 +17,37 @@
     </div>
 
     <div class="right-side">
+      <form [formGroup]="form">
+        <div>
+          <div *ngIf="name.invalid && name.touched" class="error">
+            Name is required.
+          </div>
+          <input type="text" placeholder="Your name" formControlName="name">
+        </div>
 
+        <div>
+          <div *ngIf="email.errors?.['required'] && email.touched" class="error">
+            Email is required.
+          </div>
+          <div *ngIf="email.errors?.['email'] && email.touched" class="error">
+            Please enter a valid email.
+          </div>
+          <input type="email" placeholder="Your email" formControlName="email">
+        </div>
+
+        <div>
+          <div *ngIf="message.invalid && message.touched" class="error">
+            Message is required.
+          </div>
+          <textarea placeholder="Your message" formControlName="message"></textarea>
+        </div>
+
+        <div class="btn-container">
+          <button mat-raised-button [disabled]="form.invalid">Say Hello;)</button>
+        </div>
+      </form>
     </div>
 
   </div>
 
+</section>

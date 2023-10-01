@@ -25,29 +25,13 @@ export class ProjectsComponent implements OnInit {
       'button-two':'Live Test'
     },
     {
-      'title': 'Simple CRM',
-      'skill': 'Angular | Firebase',
-      'image':'../../assets/icons/join-bg.png',
-      'description':'A very Simple Customer Relationship Management system working with CRUD functionality. ',
-      'button-one':'Github',
-      'button-two':'Live Test'
-    },
-    {
       'title': 'Pokédex',
       'skill': 'HTML | CSS | JS | API',
       'image':'../../assets/icons/pokedex.PNG',
       'description':'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       'button-one':'Github',
       'button-two':'Live Test'
-    },
-    {
-      'title': 'Crypto Converter',
-      'skill': 'Angular | Typescript | RestAPI | HTML | SCSS',
-      'image':'../../assets/icons/join-bg.png',
-      'description':'Simple currency converter based on a public API displaying exchange rate charts.',
-      'button-one':'Github',
-      'button-two':'Live Test'
-    },
+    }
   ]
 
   isAnimated = false;

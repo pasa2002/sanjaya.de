@@ -40,3 +40,79 @@ section{
     justify-content: space-between;
   }
 }
+
+.right-side{
+  width: 61.7rem;
+
+
+form{
+  display: flex;
+  flex-direction: column;
+
+  input{
+    height: 5rem;
+    margin-bottom: 3.2rem;
+  }
+
+  textarea{
+    height: 20rem;
+  }
+
+  input,textarea{
+    width: 100%;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--main-color);
+    background-color: var(--white);
+    font-size: 1.6rem;
+    padding: 1.5rem 2.5rem;
+
+    outline: none;
+    position: relative;
+    @media (max-width:768px) {
+      width: 90%;
+    }
+  }
+}
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  button{
+    border-radius: 1rem;
+    border: 0.2rem solid var(--main-color);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    padding:2.5rem 3rem;
+    align-items: center;
+    color: var(--main-color);
+    margin-top: 3.2rem;
+    margin-bottom: 10rem;
+    font-size: 2.3rem;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--main-color);
+      color: var(--white);
+      transform: scale(1.1);
+      transition: transform 225ms ease-in;
+    }
+
+
+    &:disabled {
+      border-color: grey;
+      color: grey;
+      cursor: not-allowed;
+  }
+}
+}
+
+
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+  border:1px solid red !important;
+}
