@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit , ElementRef , HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -42,4 +42,22 @@ export class ProjectsComponent implements OnInit {
       this.isAnimated = true;
     }, 100);
   }
+
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const projectDisplays = this.el.nativeElement.querySelectorAll('.project-display');
+
+    projectDisplays.forEach(display => {
+      const rect = display.getBoundingClientRect();
+
+      if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0) {
+        display.classList.add('animated');
+      } else {
+        display.classList.remove('animated');
+      }
+    });
+  }
+
 }

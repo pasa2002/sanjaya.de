@@ -10,6 +10,7 @@ header {
     margin: 2.5rem 3.7rem;
     position: relative;
     z-index: 2;
+    height: 7rem;
   }
 }
 
@@ -90,7 +91,6 @@ $menu-gap: 1rem; // Gap between the lines
   justify-content: center;
   align-items: center;
   opacity: 0;
-  visibility: hidden;
   transform: translateY(50px) scale(0.95); // Slightly move it down and scale it down
   transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
   pointer-events: none;
@@ -99,15 +99,8 @@ $menu-gap: 1rem; // Gap between the lines
 
   &.active {
     opacity: 1;
-    visibility: visible;
     pointer-events: auto;
     transform: translateY(0) scale(1);
-
-    // Staggered animation for the links
-    a:nth-child(1) { transition-delay: 0.1s; }
-    a:nth-child(2) { transition-delay: 0.2s; }
-    a:nth-child(3) { transition-delay: 0.3s; }
-    a:nth-child(4) { transition-delay: 0.4s; }
   }
 
   a {
@@ -115,14 +108,27 @@ $menu-gap: 1rem; // Gap between the lines
     color: var(--main-color);
     text-decoration: none;
     margin-bottom: 2.9rem;
-    opacity: 0;
-    transform: translateY(20px); // Each link starts moved slightly down
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+    transition: color 0.3s ease, opacity 0.3s ease;
     font-family: var(--Montserrat);
     @extend %link-hover-animation;
-    &.active {
-      opacity: 1;
-      transform: translateY(0); // Reset to original position
+
+    &:hover {
+      opacity: 0.7; // Slight fade out on hover
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--main-color);
+      transition: width 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); // This cubic-bezier gives a "spring" effect
+    }
+
+    &:hover::before {
+      width: 100%;
     }
   }
 }

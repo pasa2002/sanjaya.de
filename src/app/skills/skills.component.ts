@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , ElementRef , HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -49,5 +49,21 @@ export class SkillsComponent {
       'image': '../../assets/icons/material-design.svg',
     },
   ]
+
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset + (window.innerHeight / 2);
+
+    const skillItems = this.el.nativeElement.querySelectorAll('.skill-subcontainer');
+
+    if (scrollPosition >= componentPosition && scrollPosition <= componentPosition + this.el.nativeElement.offsetHeight) {
+      skillItems.forEach(item => item.classList.add('animated'));
+    } else {
+      skillItems.forEach(item => item.classList.remove('animated'));
+    }
+  }
 
 }

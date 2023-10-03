@@ -9,7 +9,6 @@ import { Component , HostListener } from '@angular/core';
 export class HeaderComponent {
   isActive = false;
   toggleMenu(): void {
-    console.log('Menu toggled:', this.isActive);
     this.isActive = !this.isActive;
 }
 

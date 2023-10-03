@@ -17,12 +17,12 @@
     </div>
 
     <div class="right-side">
-      <form [formGroup]="form">
+      <form #myForm (submit)="sendMail($event)" [formGroup]="form">
         <div>
           <div *ngIf="name.invalid && name.touched" class="error">
             Name is required.
           </div>
-          <input type="text" placeholder="Your name" formControlName="name">
+          <input #nameField type="text" placeholder="Your name" formControlName="name">
         </div>
 
         <div>
@@ -32,18 +32,18 @@
           <div *ngIf="email.errors?.['email'] && email.touched" class="error">
             Please enter a valid email.
           </div>
-          <input type="email" placeholder="Your email" formControlName="email">
+          <input #mailField type="email" placeholder="Your email" formControlName="email">
         </div>
 
         <div>
           <div *ngIf="message.invalid && message.touched" class="error">
             Message is required.
           </div>
-          <textarea placeholder="Your message" formControlName="message"></textarea>
+          <textarea #messageField placeholder="Your message" formControlName="message"></textarea>
         </div>
 
         <div class="btn-container">
-          <button mat-raised-button [disabled]="form.invalid">Say Hello;)</button>
+          <button #sendMailBtn mat-raised-button [disabled]="form.invalid">Say Hello;)</button>
         </div>
       </form>
     </div>

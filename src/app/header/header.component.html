@@ -1,21 +1,25 @@
 <header>
   <div class="logo-wrapper">
-    <img src="../../assets/icons/logo.svg" alt="">
+    <img src="../../assets/icons/logo.png" alt="">
   </div>
 
 
   <div class="big-screen-menu">
-    <a href="">About me</a>
-    <a href="">Skill Set</a>
-    <a href="">My work</a>
-    <a href="">Contact</a>
+    <a href="#about-me">About me</a>
+    <a href="#skills">Skill Set</a>
+    <a href="#projects">My work</a>
+    <a href="#contact-me">Contact</a>
+
+
   </div>
 
   <div [class.active]="isActive" class="menu-element">
-    <a href="#" [class.active]="isActive">About me</a>
-    <a href="#" [class.active]="isActive">Skill Set</a>
-    <a href="#" [class.active]="isActive">My work</a>
-    <a href="#" [class.active]="isActive">Contact</a>
+    <a href="#about-me">About me</a>
+    <a href="#skills">Skill Set</a>
+    <a href="#projects">My work</a>
+    <a href="#contact-me">Contact</a>
+
+
   </div>
 
   <div class="menu-wrapper" (click)="toggleMenu()">

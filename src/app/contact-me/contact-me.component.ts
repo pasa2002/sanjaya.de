@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormControl, Validators , FormGroup , FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
@@ -6,6 +6,16 @@ import { FormControl, Validators , FormGroup , FormBuilder } from '@angular/form
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit{
+  @ViewChild('myForm') myForm!:ElementRef;
+  @ViewChild('nameField') nameField!:ElementRef;
+  @ViewChild('messageField') messageField!:ElementRef;
+  @ViewChild('mailField') mailField!:ElementRef;
+  @ViewChild('sendMailBtn') sendMailBtn!:ElementRef;
+
+  nameFieldElement: any;
+  messageFieldElement: any;
+  mailFieldElement: any;
+  sendMailBtnElement: any;
 
     form: FormGroup;
     constructor(private fb: FormBuilder){};
@@ -20,4 +30,36 @@ export class ContactMeComponent implements OnInit{
     get name() { return this.form.get('name'); }
     get email() { return this.form.get('email'); }
     get message() { return this.form.get('message'); }
-  }
+
+    sendMail(event: Event) {
+      event.preventDefault();
+
+      const nameFieldElement = document.querySelector('.contact-me input[placeholder="Your name"]') as HTMLInputElement;
+      const messageFieldElement = document.querySelector('.contact-me textarea[placeholder="Your message"]') as HTMLTextAreaElement;
+      const mailFieldElement = document.querySelector('.contact-me input[placeholder="Your email"]') as HTMLInputElement;
+      const sendMailBtnElement = document.querySelector('.contact-me button') as HTMLButtonElement;
+
+      if (nameFieldElement) nameFieldElement.setAttribute('disabled', 'true');
+      if (messageFieldElement) messageFieldElement.setAttribute('disabled', 'true');
+      if (mailFieldElement) mailFieldElement.setAttribute('disabled', 'true');
+      if (sendMailBtnElement) sendMailBtnElement.setAttribute('disabled', 'true');
+
+      let fd = new FormData();
+      if (nameFieldElement && nameFieldElement.value) fd.append('name', nameFieldElement.value);
+      if (messageFieldElement && messageFieldElement.value) fd.append('message', messageFieldElement.value);
+      if (mailFieldElement && mailFieldElement.value) fd.append('mail', mailFieldElement.value);
+
+      fetch('https://sanjaya-shrestha.developerakademie.net/send_mail/send_mail.php', {
+        method: 'POST',
+        body: fd
+      })
+
+
+      if (nameFieldElement) nameFieldElement.setAttribute('disabled', 'false');
+      if (messageFieldElement) messageFieldElement.setAttribute('disabled', 'false');
+      if (mailFieldElement) mailFieldElement.setAttribute('disabled', 'false');
+      if (sendMailBtnElement) sendMailBtnElement.setAttribute('disabled', 'false');
+    }
+
+
+}

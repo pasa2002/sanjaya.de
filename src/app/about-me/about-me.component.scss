@@ -26,11 +26,29 @@
       font-weight: 800;
       color:var(--main-color);
       max-width: 60.6rem;
+      transform: translateX(-100%); // initial state
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
     }
 
     p{
       max-width: 51.7rem;
       font-size:2.3rem;
+      transform: translateX(100%); // initial state
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &.animated {
+      h2, b {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      p {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     .content-two-div{
@@ -50,6 +68,18 @@
     margin-right: 10rem;
     margin-bottom: 12.3rem;
 
+    & > *, button {
+      transform: translateX(100%); // initial state for elements on the right
+      opacity: 0;
+      transition: transform 1s, opacity 1s;
+    }
+
+    &.animated {
+      & > *, button {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
     button{
       padding:1.5rem 3rem;
       border-radius: 1rem;
@@ -58,12 +88,12 @@
       font-size: 2.3rem;
       background-color: transparent;
       color: var(--main-color);
-
       &:hover{
         animation: buttonAnimation 725ms forwards;
         color:white;
         cursor: pointer;
       }
+
     }
   }
 

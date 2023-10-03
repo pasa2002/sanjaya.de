@@ -50,11 +50,12 @@
   margin-top: 2rem;
 
   .pp-image {
-    height: 101rem;
+    height: 91rem;
     object-fit: cover;
     position: absolute;
     left: 2%;
     z-index: 2;
+    bottom: -3rem;
   }
 
   .hero-section-text {
@@ -142,9 +143,9 @@
 
   .hero-content{
     .pp-image{
-      height: 83rem;
+      height: 82rem;
       top: 12%;
-      width:45%;
+      width:40%;
     }
   }
 
@@ -162,7 +163,7 @@
   }
   .hero-content{
     .pp-image{
-      height: 69rem;
+      height: 67.3rem;
       top: 21%;
     }
   }
@@ -184,6 +185,10 @@
   .buble-one{
     scale:0.6;
     margin-top: -47rem;
+  }
+
+  .socials{
+    bottom: 7.2rem !important;
   }
 
 }
