@@ -154,3 +154,38 @@
 .project-display.row-reverse {
   flex-direction: row-reverse;
 }
+
+@media only screen and (max-width:900px){
+  .project-display{
+    flex-direction: column !important;
+    align-items: center !important;
+    .project-detail{
+      max-width: unset !important;
+      justify-content: center !important;
+    align-items:center !important;
+    }
+  }
+}
+
+@media only screen and (max-width:780px){
+
+  .projects{
+    padding-left: 3.2rem !important;
+    padding-right: 3.2rem !important;
+  }
+}
+
+@media only screen and (max-width:490px){
+
+  .project-header{
+    font-size: 6.4rem !important;
+  }
+
+  .mb-102{
+    span{
+      font-size: 1.6rem !important;
+    }
+  }
+
+
+}

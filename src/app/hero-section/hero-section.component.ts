@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
-
 }

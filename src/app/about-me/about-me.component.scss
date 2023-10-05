@@ -103,15 +103,7 @@
 
     .bubble-one{
       scale:0.6;
-      margin-top: -42rem !important;
-    }
-
-  }
-
-  @media only screen and (max-width:1180px) {
-
-    .bubble-one{
-      margin-top: -47rem !important;
+      margin-top: -36rem !important;
     }
 
   }
@@ -168,8 +160,44 @@
       gap: unset !important;
     }
 
+    .bubble-one{
+      top: 115rem !important;
+      left: 65% !important;
+    }
+
   }
 
+  @media only screen and (max-width:780px){
+
+    .about-me{
+      margin-left: 3.2rem !important;
+      margin-right: 3.2rem !important;
+    }
+
+    .contact-btn{
+      margin-bottom: 10.3rem !important;
+      margin-top: 5rem !important;
+    }
+  }
+
+  @media only screen and (max-width:490px){
+    .bubble-one{
+        top: 96rem !important;
+        left: 54% !important;
+        transform: scale(0.5);
+    }
+
+    .bubble-two{
+      margin-top:8rem !important;
+    }
+
+    .about-me-content{
+
+      h2{
+        font-size: 6.5rem !important;
+      }
+    }
+  }
 
 
   @keyframes buttonAnimation {

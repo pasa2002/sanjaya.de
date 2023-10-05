@@ -116,3 +116,28 @@ form{
 input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   border:1px solid red !important;
 }
+
+
+@media only screen and (max-width:780px){
+
+  .contact-me{
+    padding-left: 3.2rem !important;
+    padding-right: 3.2rem !important;
+
+    .contact-header{
+      font-size: 4.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .contact-container{
+      flex-direction: column !important;
+
+      .right-side{
+        width: unset;
+        margin-top: 3.5rem;
+      }
+
+    }
+
+  }
+}
