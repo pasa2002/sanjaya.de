@@ -1,6 +1,7 @@
 .about-me{
   margin-left: 9.2rem;
   margin-right: 9.6rem;
+  max-width: 192rem;
   .bubble-one {
       margin-top: -34rem;
       z-index: 4;
@@ -86,11 +87,12 @@
       border: 2px solid var(--main-color);
       box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
       font-size: 2.3rem;
-      background-color: transparent;
+      background: transparent;
       color: var(--main-color);
+      transition: background 725ms, color 725ms;
       &:hover{
-        animation: buttonAnimation 725ms forwards;
-        color:white;
+        background: var(--main-color);
+        color: white;
         cursor: pointer;
       }
 

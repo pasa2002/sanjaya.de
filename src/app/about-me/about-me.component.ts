@@ -16,9 +16,6 @@ export class AboutMeComponent {
     if (scrollPosition >= componentPosition && scrollPosition <= componentPosition + this.el.nativeElement.offsetHeight) {
       this.el.nativeElement.querySelector('.about-me-content').classList.add('animated');
       this.el.nativeElement.querySelector('.contact-btn').classList.add('animated');
-    } else {
-      this.el.nativeElement.querySelector('.about-me-content').classList.remove('animated');
-      this.el.nativeElement.querySelector('.contact-btn').classList.remove('animated');
     }
   }
 

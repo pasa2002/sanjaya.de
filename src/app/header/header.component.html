@@ -1,6 +1,6 @@
 <header>
   <div class="logo-wrapper">
-    <img src="../../assets/icons/logo.png" alt="">
+    <img routerLink="/" [src]="getLogo()" alt="">
   </div>
 
 
@@ -9,17 +9,17 @@
     <a href="#skills">Skill Set</a>
     <a href="#projects">My work</a>
     <a href="#contact-me">Contact</a>
-
-
   </div>
 
   <div [class.active]="isActive" class="menu-element">
-    <a href="#about-me">About me</a>
-    <a href="#skills">Skill Set</a>
-    <a href="#projects">My work</a>
-    <a href="#contact-me">Contact</a>
 
-
+    <div class="logo">
+      <img src="../../assets/icons/logo-blue.png" alt="">
+    </div>
+    <a href="#about-me" (click)="closeMenu()">About me</a>
+    <a href="#skills" (click)="closeMenu()">Skill Set</a>
+    <a href="#projects" (click)="closeMenu()">My work</a>
+    <a href="#contact-me" (click)="closeMenu()">Contact</a>
   </div>
 
   <div class="menu-wrapper" (click)="toggleMenu()">

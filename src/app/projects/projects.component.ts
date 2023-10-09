@@ -11,10 +11,12 @@ export class ProjectsComponent implements OnInit {
     {
       'title': 'Join',
       'skill': 'HTML | CSS | JS',
-      'image':'../../assets/icons/join-bg.png',
+      'image':'../../assets/icons/join-bg.svg',
       'description':'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       'button-one':'Github',
-      'button-two':'Live Test'
+      'button-two':'Live Test',
+      'linkOne': 'https://github.com/pasa2002/Join',
+      'linkTwo':'https://sanjaya-shrestha.developerakademie.net/Join/html/index.html'
     },
     {
       'title': 'Pollo Loco',
@@ -22,15 +24,9 @@ export class ProjectsComponent implements OnInit {
       'image':'../../assets/icons/pollo-loco-bg.png',
       'description':'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       'button-one':'Github',
-      'button-two':'Live Test'
-    },
-    {
-      'title': 'Pokédex',
-      'skill': 'HTML | CSS | JS | API',
-      'image':'../../assets/icons/pokedex.PNG',
-      'description':'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      'button-one':'Github',
-      'button-two':'Live Test'
+      'button-two':'Live Test',
+      'linkOne': 'https://github.com/pasa2002/El-Pollo-Loco',
+      'linkTwo':'https://sanjaya-shrestha.developerakademie.net/El-Pollo-Loco/index.html'
     }
   ]
 
@@ -54,10 +50,13 @@ export class ProjectsComponent implements OnInit {
 
       if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0) {
         display.classList.add('animated');
-      } else {
-        display.classList.remove('animated');
       }
     });
   }
+
+  redirectTo(link: string) {
+    window.open(link, '_blank');
+  }
+
 
 }

@@ -16,6 +16,7 @@ export class ContactMeComponent implements OnInit{
   messageFieldElement: any;
   mailFieldElement: any;
   sendMailBtnElement: any;
+  showPopup: boolean = false;
 
     form: FormGroup;
     constructor(private fb: FormBuilder){};
@@ -52,14 +53,27 @@ export class ContactMeComponent implements OnInit{
       fetch('https://sanjaya-shrestha.developerakademie.net/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
+      })  .then(response => {
+        if (response.ok) {
+          this.showPopup = true;
+          setTimeout(() => {
+            this.showPopup = false;
+          }, 2500);
+
+          // Re-enable fields and button
+          if (nameFieldElement) nameFieldElement.removeAttribute('disabled');
+          if (messageFieldElement) messageFieldElement.removeAttribute('disabled');
+          if (mailFieldElement) mailFieldElement.removeAttribute('disabled');
+          // if (sendMailBtnElement) sendMailBtnElement.removeAttribute('disabled');
+
+          nameFieldElement.value = '';
+          messageFieldElement.value = '';
+          mailFieldElement.value = '';
+        }
       })
-
-
-      if (nameFieldElement) nameFieldElement.setAttribute('disabled', 'false');
-      if (messageFieldElement) messageFieldElement.setAttribute('disabled', 'false');
-      if (mailFieldElement) mailFieldElement.setAttribute('disabled', 'false');
-      if (sendMailBtnElement) sendMailBtnElement.setAttribute('disabled', 'false');
+      .catch(error => {
+        console.error('Error sending mail:', error);
+      });
     }
-
 
 }

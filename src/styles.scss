@@ -42,3 +42,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
+body.no-scroll, html.no-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}

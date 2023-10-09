@@ -22,8 +22,9 @@
         {{ project.description }}
       </p>
       <div class="link-button">
-        <button>{{ project['button-one'] }}</button>
-        <button>{{ project['button-two'] }}</button>
+        <button (click)="redirectTo(project['linkOne'])">{{ project['button-one'] }}</button>
+        <button (click)="redirectTo(project['linkTwo'])">{{ project['button-two'] }}</button>
+
       </div>
     </div>
   </div>

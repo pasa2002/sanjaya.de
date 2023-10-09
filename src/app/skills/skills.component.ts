@@ -61,8 +61,6 @@ export class SkillsComponent {
 
     if (scrollPosition >= componentPosition && scrollPosition <= componentPosition + this.el.nativeElement.offsetHeight) {
       skillItems.forEach(item => item.classList.add('animated'));
-    } else {
-      skillItems.forEach(item => item.classList.remove('animated'));
     }
   }
 

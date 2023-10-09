@@ -6,6 +6,13 @@ $gradient-position: 10.51% 28.29%;
 $gradient-start-stop: 6.25%;
 $gradient-mid-stop: 51.56%;
 
+:host.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
 footer {
   background: radial-gradient($gradient-size at $gradient-position, $gradient-start-color $gradient-start-stop, $gradient-mid-color $gradient-mid-stop, $gradient-end-color 100%);
   display: flex;
@@ -13,6 +20,7 @@ footer {
   align-items: center;
   color: var(--white);
   padding: 10.1rem 10rem 6rem 10rem;
+  max-width: 192rem;
   img{
     padding-top: 2rem;
     height: 7rem;
@@ -36,6 +44,7 @@ footer {
       text-decoration: none;
       transition: font-weight 225ms ease-in;
       cursor: pointer;
+      color: white;
 
       &::before {
         content: '';
@@ -78,7 +87,7 @@ footer {
 
 
 
-@media only screen and (max-width:490px){
+@media only screen and (max-width:780px){
   footer{
     flex-direction: column;
     padding-left: 3.2rem !important;

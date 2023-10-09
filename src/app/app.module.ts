@@ -17,6 +17,8 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -31,6 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     ProjectsComponent,
     ContactMeComponent,
     FooterComponent,
+    ImprintComponent,
+    HomeComponent,
 
   ],
   imports: [
