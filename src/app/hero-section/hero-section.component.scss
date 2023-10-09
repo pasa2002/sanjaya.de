@@ -14,8 +14,8 @@
   background-color: var(--background-color);
   padding-right: 8.7rem;
   height: 100vh;
-  max-width: 192rem;
   overflow: hidden;
+  position: sticky;
 
   .socials {
     display: flex;
@@ -25,7 +25,7 @@
     gap: 2.5rem;
     width: 10.9rem;
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
 
     .github, .linkedin {
       margin-right: 1rem
@@ -56,15 +56,17 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
+  gap: 16%;
+  // overflow: hidden;
 
-  .pp-image {
-    height: 91rem !important;
-    object-fit: cover;
+  .pp-image{
+    height: 90vh;
     position: absolute;
-    left: 2%;
-    z-index: 2;
-    bottom: -3rem;
+    z-index: 6;
+    left: 0%;
+    bottom: 0;
   }
+
 
   .hero-section-text {
     color: var(--main-color);
@@ -78,10 +80,14 @@
     }
 
     .scroll {
+      position: absolute;
+      bottom: 0;
+      right: 17%;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      margin-top: 11.25rem;
+      justify-content: center;
+      flex-direction: column;
+
 
       span {
         margin-bottom: 1rem;
@@ -134,29 +140,10 @@
     font-size: 8.8rem;
   }
 
-  .hero-content{
-    .pp-image{
-      height: 92rem !important;
-      bottom: 0 !important;
-    }
+  .hero-section-text{
+    margin-top: 16.2rem !important;
   }
 
-  .scroll{
-    margin-top: 17.25rem !important;
-  }
-
-}
-
-@media only screen and (max-width:1920px) {
-  .scroll{
-    margin-top: 28.5rem !important;
-  }
-
-  .hero-content{
-    .pp-image{
-      bottom: 0rem !important;
-  }
-}
 }
 
 @media only screen and (max-width:1420px) {
@@ -166,13 +153,10 @@
     }
   }
 
-  .hero-content{
-    .pp-image{
-      height: 88rem !important;
-      top: 12%;
-      width:40%;
-    }
+  .pp-image{
+    height: 85vh !important;
   }
+
 }
 
 @media only screen and (max-width:1180px) {
@@ -180,12 +164,6 @@
     img {
       top: -9rem;
       left: -17rem;
-    }
-  }
-  .hero-content{
-    .pp-image{
-      height: 87.3rem !important;
-      top: 13%;
     }
   }
 
@@ -209,10 +187,6 @@
   }
 
 
-  .scroll{
-    margin-top: 23.25rem !important;
-  }
-
 }
 
 @media only screen and (max-width:990px) {
@@ -227,15 +201,7 @@
     display: none !important;
   }
 
-  .hero-content{
-    .pp-image{
-      height:45.3rem !important;
-      top: unset !important;
-      width: unset !important;
-      left: unset !important;
-      right: 27%;
-    }
-  }
+
 
   .hero-section-text {
     display: flex;
@@ -244,9 +210,10 @@
     flex-direction: column;
     z-index: 4;
     width: 100%;
+    margin-top: 13.7rem !important;
 
     p{
-      background: linear-gradient(to right, white 0%, white 30%, #5988FF 100%);
+      background: linear-gradient(to right, white 0%, white 5%, #5988FF 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -261,27 +228,16 @@
     }
 
   }
-}
 
-
-@media only screen and (max-width:895px){
-  .hero-content{
-    .pp-image{
-height:45.3rem !important;
-      right: 29%;
-    }
+  .pp-image{
+    height: 65vh !important;
+    left: 33% !important;
   }
+
+
 }
 
-@media only screen and (max-width:800px){
-  .hero-content{
-    .pp-image{
-height:40.3rem !important;
-    }
-  }
-}
-
-@media only screen and (max-width:700px){
+@media only screen and (max-width:760px){
 
   .hero-section{
     padding-left: 3.2rem;
@@ -294,14 +250,8 @@ height:40.3rem !important;
       top: -20rem;
     }
   }
-
-
     .hero-section-text{
     display: unset;
-
-    p{
-      color: white;
-    }
   }
 
   .fs-64{
@@ -314,6 +264,11 @@ height:40.3rem !important;
 
   .fs-128{
     font-size: 7.4rem !important;
+  }
+
+  .pp-image{
+    height: 65vh !important;
+    left: 24% !important;
   }
 }
 
@@ -340,14 +295,22 @@ height:40.3rem !important;
     margin-top: -5rem !important;
   }
 
+
+
 }
 
-@media only screen and (max-width:440px){
+@media only screen and (max-width:485px){
   .bg-bubble{
     img{
       transform: scale(0.6) !important;
       top: -22rem;
       left: -18rem;
+    }
+  }
+
+  .hero-section-text{
+    p{
+      color: var(--white);
     }
   }
   .fs-64{
@@ -364,11 +327,13 @@ height:40.3rem !important;
     margin-top: -4rem !important;
   }
 
+  .pp-image{
+    height: 60vh !important;
+    left: 23% !important;
+  }
+
   .hero-content{
-    .pp-image{
-    height:37rem !important;
-      right:11%;
-    }
+    gap: unset;
   }
 }
 
@@ -379,6 +344,10 @@ height:40.3rem !important;
       top: -26rem;
       left: -22rem;
     }
+  }
+
+  .hero-section-text{
+    margin-top:10.7rem !important;
   }
   .fs-64{
     font-size: 1.9rem !important;
@@ -394,66 +363,31 @@ height:40.3rem !important;
     margin-top: -3rem !important;
   }
 
-  .hero-content{
-    .pp-image{
-      height:37rem !important;
-      right: 10%;
-    }
-  }
+
 }
 
 @media only screen and (width: 414px) and (height: 896px) {
-    .hero-content{
-      .pp-image{
-        height:59rem !important;
-        right: 9%;
-      }
-    }
+
 }
 
 @media only screen and (width: 390px) and (height: 844px) {
-  .hero-content{
-    .pp-image{
-      height:59rem !important;
-      right: 2% !important;
-    }
-  }
+
 }
 
 @media only screen and (width: 393px) and (height: 851px) {
-  .hero-content{
-    .pp-image{
-      height:59rem !important;
-      right: 5% !important;
-    }
-  }
+
 }
 
 @media only screen and (width: 412px) and (height: 915px) {
-  .hero-content{
-    .pp-image{
-      height:63rem !important;
-      right: 5% !important;
-    }
-  }
+
 }
 
 @media only screen and (width: 820px) and (height: 1180px) {
-  .hero-content{
-    .pp-image{
-      height:84rem !important;
-      right: 8% !important;
-    }
-  }
+
 }
 
 @media only screen and (width: 768px) and (height: 1024px) {
-  .hero-content{
-    .pp-image{
-      height:70rem !important;
-      right: 12% !important;
-    }
-  }
+
 }
 
 @media only screen and (width: 912px) and (height: 1368px)
@@ -462,10 +396,5 @@ height:40.3rem !important;
     margin-top: 15.2rem !important;
   }
 
-  .hero-content{
-    .pp-image{
-      right: 13% !important;
-      height:94.3rem !important;
-    }
-  }
+
 }

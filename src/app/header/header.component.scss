@@ -5,12 +5,11 @@ header {
   background-color: var(--background-color);
   position: absolute;
   width: 100%;
-  max-width:192rem;
 
   img {
     margin: 2.5rem 9.2rem;
     position: relative;
-    z-index: 2;
+    z-index: 7;
     height: 7rem;
     cursor: pointer;
   }
@@ -153,6 +152,7 @@ body {
   display: flex;
   gap: 4rem;
   margin-right: 8.35rem;
+  z-index: 7;
 
 
   a {
