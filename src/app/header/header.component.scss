@@ -32,7 +32,7 @@ $menu-gap: 1rem; // Gap between the lines
   margin-right: 2.5rem;
   overflow: hidden;
   position: relative;
-  z-index: 6;
+  z-index: 8;
 
   .menu-line {
     width: $menu-width;
@@ -82,7 +82,7 @@ $menu-gap: 1rem; // Gap between the lines
 
 .menu-element {
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   top: 0;
   left: 0;
   right: 0;
@@ -140,7 +140,6 @@ $menu-gap: 1rem; // Gap between the lines
 }
 
 body {
-
   &.no-scroll {
     overflow: hidden;
     max-height: 100vh;
@@ -191,6 +190,14 @@ body {
 position: absolute;
 }
 
+@media (max-width: 500px) {
+.logo{
+  img{
+  margin: 2.5rem 3.2rem !important;
+
+}}
+
+}
 
 @media (max-width: 1080px) {
   .menu-wrapper ,   .menu-element {
@@ -208,5 +215,12 @@ position: absolute;
     img{
       margin: 2.5rem 3.2rem
     }
+  }
+}
+
+@media only screen and (min-width:2001px){
+  header{
+    padding-left: 20%;
+    padding-right: 15%;
   }
 }

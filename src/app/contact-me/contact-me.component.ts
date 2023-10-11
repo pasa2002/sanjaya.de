@@ -50,7 +50,7 @@ export class ContactMeComponent implements OnInit{
       if (messageFieldElement && messageFieldElement.value) fd.append('message', messageFieldElement.value);
       if (mailFieldElement && mailFieldElement.value) fd.append('mail', mailFieldElement.value);
 
-      fetch('https://sanjaya-shrestha.developerakademie.net/send_mail/send_mail.php', {
+      fetch('https://sanjayashrestha.com/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
       })  .then(response => {
@@ -58,7 +58,7 @@ export class ContactMeComponent implements OnInit{
           this.showPopup = true;
           setTimeout(() => {
             this.showPopup = false;
-          }, 2500);
+          }, 1500);
 
           // Re-enable fields and button
           if (nameFieldElement) nameFieldElement.removeAttribute('disabled');

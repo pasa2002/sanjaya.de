@@ -27,9 +27,6 @@
     position: absolute;
     bottom: 0%;
 
-    .github, .linkedin {
-      margin-right: 1rem
-    }
 
     img{
       transition: transform 0.3s ease-in-out;
@@ -37,6 +34,11 @@
 
     .linkedin {
       margin-bottom: 6.4rem;
+    }
+
+    .mail{
+      height: 4rem;
+      width: 4.3rem;
     }
 
     img {
@@ -57,7 +59,6 @@
   justify-content: flex-end;
   margin-top: 2rem;
   gap: 16%;
-  // overflow: hidden;
 
   .pp-image{
     height: 90vh;
@@ -201,8 +202,6 @@
     display: none !important;
   }
 
-
-
   .hero-section-text {
     display: flex;
     justify-content: center;
@@ -231,7 +230,7 @@
 
   .pp-image{
     height: 65vh !important;
-    left: 33% !important;
+    left: 25% !important;
   }
 
 
@@ -268,7 +267,7 @@
 
   .pp-image{
     height: 65vh !important;
-    left: 24% !important;
+    left: 0% !important;
   }
 }
 
@@ -329,7 +328,7 @@
 
   .pp-image{
     height: 60vh !important;
-    left: 23% !important;
+    left: 0% !important;
   }
 
   .hero-content{
@@ -366,35 +365,28 @@
 
 }
 
-@media only screen and (width: 414px) and (height: 896px) {
 
-}
-
-@media only screen and (width: 390px) and (height: 844px) {
-
-}
-
-@media only screen and (width: 393px) and (height: 851px) {
-
-}
-
-@media only screen and (width: 412px) and (height: 915px) {
-
-}
-
-@media only screen and (width: 820px) and (height: 1180px) {
-
-}
-
-@media only screen and (width: 768px) and (height: 1024px) {
-
-}
-
-@media only screen and (width: 912px) and (height: 1368px)
-{
-  .hero-section-text{
-    margin-top: 15.2rem !important;
+@media only screen and (min-width:2001px){
+  .hero-section{
+    padding-left: 20%;
+    padding-right: 15%;
   }
 
+  .pp-image{
+    left: 21% !important;
+  }
+
+  .scroll{
+    margin-right: 10%;
+  }
 
 }
+
+@media only screen and (min-width:2600px){
+  .bg-bubble{
+    img{
+    transform: scale(1.8);
+  }}
+
+}
+

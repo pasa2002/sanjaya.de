@@ -162,7 +162,7 @@
     }
 
     .bubble-one{
-      top: 115rem !important;
+      top: 113rem !important;
       left: 65% !important;
     }
 
@@ -201,19 +201,14 @@
   }
 
 
-  @keyframes buttonAnimation {
-    0% {
-      background: linear-gradient(105deg, #5988FF -90.22%, #5988FF -49.45%, #0043F0 27.88%, #FFF 33.64%, #FFF 39.44%, #FFF 90.08%);
+
+  @media only screen and (min-width:2001px){
+    .about-me-content{
+      padding-left: 20% !important;
+      padding-right: 15% !important;
     }
-    33.33%{
-      background: linear-gradient(104deg, #5988FF 9.21%, #5988FF 27.52%, #0043F0 62.24%, #FFF 64.83%, #FFF 67.43%, #FFF 90.18%);
-    }
-    66.66% {
-      background: var(--style-2-style-2-blue-gr, radial-gradient(91.12% 91.12% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%));
-    }
-    100% {
-      background: #0043F0;
+
+    .contact-btn{
+      margin-right: 31rem !important;
     }
   }
-
-

@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
       'button-one':'Github',
       'button-two':'Live Test',
       'linkOne': 'https://github.com/pasa2002/Join',
-      'linkTwo':'https://sanjaya-shrestha.developerakademie.net/Join/html/index.html'
+      'linkTwo':'https://www.sanjayashrestha.com/Join/html/index.html'
     },
     {
       'title': 'Pollo Loco',
@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
       'button-one':'Github',
       'button-two':'Live Test',
       'linkOne': 'https://github.com/pasa2002/El-Pollo-Loco',
-      'linkTwo':'https://sanjaya-shrestha.developerakademie.net/El-Pollo-Loco/index.html'
+      'linkTwo':'https://www.sanjayashrestha.com/El-Pollo-Loco/index.html'
     }
   ]
 

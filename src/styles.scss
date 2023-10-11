@@ -24,6 +24,10 @@
   --poppins: 'Poppins', sans-serif;
 }
 
+body{
+  min-height: 100vh;
+}
+
 body::-webkit-scrollbar {
   width: 6px;
 }

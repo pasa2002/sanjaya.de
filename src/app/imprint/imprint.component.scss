@@ -1,5 +1,6 @@
 .imprint{
-  min-height: 74vh;
+  height: calc(100vh - 26rem);
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,5 +31,19 @@
   }
   p{
     font-size: 1.4rem !important;
+  }
+}
+
+@media only screen and (max-width:415px){
+  h2{
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen and (max-width:380px){
+
+  h1{
+    margin-top: 20% !important;
+    font-size: 4rem !important;
   }
 }

@@ -68,6 +68,12 @@
   }
 }
 
+@media only screen and (max-width:1180px){
+  .skill-container{
+    min-width: unset !important;
+  }
+}
+
 @media only screen and (max-width:780px){
 
   .skills{
@@ -84,3 +90,11 @@
 }
 
 
+@media only screen and (min-width:2001px){
+
+  .skill-container{
+    padding-left: 20% !important;
+    padding-right: 15% !important;
+  }
+
+}

@@ -106,6 +106,17 @@ form{
 }
 }
 
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .popup {
   position: fixed;
   top: 50%;
@@ -117,7 +128,12 @@ form{
   border-radius: 1rem;
   font-size: 3rem;
   z-index: 1000;
+
+  /* Animation properties */
+  animation: fadeInScaleUp 0.5s forwards;
+  opacity: 0;
 }
+
 
 .error {
   color: red;
@@ -127,6 +143,25 @@ form{
 input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   border:1px solid red !important;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 
 
 @media only screen and (max-width:780px){
@@ -157,3 +192,12 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
   .contact-me{
     padding-right: 0rem !important;
 }}
+
+@media only screen and (min-width:2001px){
+
+  .contact-me{
+    padding-left: 20% !important;
+    padding-right: 15% !important;
+  }
+
+}
