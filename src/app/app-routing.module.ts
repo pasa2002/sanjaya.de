@@ -20,8 +20,16 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true}),
+  imports: [RouterModule.forRoot(routes, getRouterModuleConfig()),
   CommonModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export function getRouterModuleConfig() {
+  if (window.location.href.includes('/imprint')) {
+    return { useHash: true };
+  } else {
+    return { useHash: false };
+  }
+}
