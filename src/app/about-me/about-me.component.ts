@@ -1,4 +1,4 @@
-import { Component , ElementRef , HostListener} from '@angular/core';
+import { Component , ElementRef , HostListener, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
@@ -6,18 +6,34 @@ import { Component , ElementRef , HostListener} from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
-  constructor(private el: ElementRef) {}
+  @ViewChild('aboutMeSection') aboutMeSection: ElementRef;
+  private hasAnimated = false;
+
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
 
   @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop;
-    const scrollPosition = window.pageYOffset + (window.innerHeight / 2);
+  onScroll(event) {
+    console.log("Scrolling...");
+    this.checkScroll();
+  }
 
-    if (scrollPosition >= componentPosition && scrollPosition <= componentPosition + this.el.nativeElement.offsetHeight) {
-      this.el.nativeElement.querySelector('.about-me-content').classList.add('animated');
-      this.el.nativeElement.querySelector('.contact-btn').classList.add('animated');
+
+  private checkScroll() {
+    if (this.hasAnimated) return;
+
+    const rect = this.aboutMeSection.nativeElement.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    // Check if the top of the section has passed the bottom of the viewport
+    if (rect.top + rect.height < windowHeight) {
+      this.aboutMeSection.nativeElement.classList.add('animate');
+      this.hasAnimated = true;
     }
   }
+
+
 
 
 }

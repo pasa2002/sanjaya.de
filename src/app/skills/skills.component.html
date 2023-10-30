@@ -1,7 +1,7 @@
-<section class="skills">
+<section class="skills" #skillsSection>
   <h2>Skill set</h2>
   <div class="skill-container">
-    <div class="skill-subcontainer" *ngFor="let skillItem of skill">
+    <div  class="skill-subcontainer" *ngFor="let skillItem of skill">
       <img [src]="skillItem.image" alt="{{ skillItem.name }}">
       <p>{{ skillItem.name }}</p>
     </div>

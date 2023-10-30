@@ -166,6 +166,7 @@ body {
     @extend %link-hover-animation;
     &:hover {
       color: var(--main-color);
+      cursor: pointer;
 
 
       &::after {

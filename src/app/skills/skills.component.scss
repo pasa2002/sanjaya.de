@@ -4,6 +4,25 @@
   padding-left: 10rem;
   padding-right: 8.7rem;
 
+  h2, .skill-subcontainer {
+
+    opacity: 0;
+  }
+
+  &.animate {
+    h2 {
+
+      opacity: 1;
+      transition: opacity 225ms ease-in-out;
+    }
+
+    .skill-subcontainer {
+      animation: slideInFromLeft 1s forwards;
+    }
+  }
+
+
+
   h2 {
     font-size: 9.6rem;
     font-family: 'Baloo 2', cursive;
@@ -30,16 +49,17 @@
       flex-direction: column;
       align-items: center;
       min-width: 9rem;
-      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       margin-top: 2rem;
-      transform: translateX(-100%);
-      opacity: 0;
-
-      &.animated {
-        transform: translateX(0);
-        opacity: 1;
-        transition: transform 0.5s, opacity 0.5s;
-      }
+      &:nth-child(1) { animation-delay: 0.1s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.3s; }
+      &:nth-child(4) { animation-delay: 0.4s; }
+      &:nth-child(5) { animation-delay: 0.5s; }
+      &:nth-child(6) { animation-delay: 0.6s; }
+      &:nth-child(7) { animation-delay: 0.7s; }
+      &:nth-child(8) { animation-delay: 0.8s; }
+      &:nth-child(9) { animation-delay: 0.9s; }
+      &:nth-child(10) { animation-delay: 1s; }
 
       &:hover {
         font-weight: 700;
@@ -55,18 +75,21 @@
         transform: scale(1);
       }
     }
-    .skill-subcontainer:nth-child(1) { transition-delay: 0.1s; }
-    .skill-subcontainer:nth-child(2) { transition-delay: 0.2s; }
-    .skill-subcontainer:nth-child(3) { transition-delay: 0.3s; }
-    .skill-subcontainer:nth-child(4) { transition-delay: 0.4s; }
-    .skill-subcontainer:nth-child(5) { transition-delay: 0.5s; }
-    .skill-subcontainer:nth-child(6) { transition-delay: 0.6s; }
-    .skill-subcontainer:nth-child(7) { transition-delay: 0.7s; }
-    .skill-subcontainer:nth-child(8) { transition-delay: 0.8s; }
-    .skill-subcontainer:nth-child(9) { transition-delay: 0.9s; }
-    .skill-subcontainer:nth-child(10) { transition-delay: 1s; }
+
   }
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 @media only screen and (max-width:1180px){
   .skill-container{

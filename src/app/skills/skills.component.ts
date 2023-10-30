@@ -1,4 +1,4 @@
-import { Component , ElementRef , HostListener} from '@angular/core';
+import { Component , ElementRef , HostListener, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -49,18 +49,31 @@ export class SkillsComponent {
       'image': '../../assets/icons/material-design.svg',
     },
   ]
+  private hasAnimated = false;
 
   constructor(private el: ElementRef) {}
 
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
+  @ViewChild('skillsSection') skillsSection: ElementRef;
+
   @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop;
-    const scrollPosition = window.pageYOffset + (window.innerHeight / 2);
+  onScroll(event){
+    console.log('scrolling..')
+  this.checkScroll()
+  }
 
-    const skillItems = this.el.nativeElement.querySelectorAll('.skill-subcontainer');
 
-    if (scrollPosition >= componentPosition && scrollPosition <= componentPosition + this.el.nativeElement.offsetHeight) {
-      skillItems.forEach(item => item.classList.add('animated'));
+  private checkScroll(){
+    if(this.hasAnimated) return;
+
+    const rect = this.skillsSection.nativeElement.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    if(rect.top + rect.height < windowHeight-10){
+      this.skillsSection.nativeElement.classList.add('animate');
+      this.hasAnimated = true;
     }
   }
 

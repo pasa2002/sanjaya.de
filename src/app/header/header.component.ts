@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,11 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(public router: Router) { }
+  constructor(public router: Router,private viewportScroller: ViewportScroller) { }
   isActive = false;
+
 
   getLogo(): string {
     return this.router.url === '/imprint' ? '../../assets/icons/logo-blue.png' : '../../assets/icons/logo.png';
+  }
+
+  scrollToElement(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
   toggleMenu(): void {
