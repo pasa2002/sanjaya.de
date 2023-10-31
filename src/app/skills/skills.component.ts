@@ -60,7 +60,6 @@ export class SkillsComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event){
-    console.log('scrolling..')
   this.checkScroll()
   }
 

@@ -15,7 +15,6 @@ export class AboutMeComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
-    console.log("Scrolling...");
     this.checkScroll();
   }
 
