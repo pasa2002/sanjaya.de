@@ -368,8 +368,8 @@
 
 @media only screen and (min-width:2001px){
   .hero-section{
-    padding-left: 20%;
-    padding-right: 15%;
+    padding-left: 30%;
+    padding-right: 25%;
   }
 
   .pp-image{
@@ -378,6 +378,12 @@
 
   .scroll{
     margin-right: 10%;
+  }
+
+  .vl{
+    img{
+      height: 32rem !important;
+    }
   }
 
 }

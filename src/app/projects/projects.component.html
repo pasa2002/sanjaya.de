@@ -10,7 +10,7 @@
   </div>
 
   <div class="project-display" *ngFor="let project of project_json; let i = index" [ngClass]="{'row-reverse': i % 2 !== 0}">
-    <img [src]="project.image" alt="{{ project.title }}">
+    <img [src]="project.image" alt="{{ project.title }}" class="project-image">
     <div class="project-detail">
       <h3 class="title">
         {{ project.title }}

@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
       'button-one':'Github',
       'button-two':'Live Test',
       'linkOne': 'https://github.com/pasa2002/Join',
-      'linkTwo':'https://www.sanjayashrestha.com/Join/html/index.html'
+      'linkTwo':'https://join.sanjayashrestha.com/html/index.html'
     },
     {
       'title': 'Pollo Loco',
@@ -26,7 +26,17 @@ export class ProjectsComponent implements OnInit {
       'button-one':'Github',
       'button-two':'Live Test',
       'linkOne': 'https://github.com/pasa2002/El-Pollo-Loco',
-      'linkTwo':'https://www.sanjayashrestha.com/El-Pollo-Loco/index.html'
+      'linkTwo':'https://el-poco.sanjayashrestha.com/index.html'
+    },
+    {
+      'title': 'Basketball CRM',
+      'skill': 'HTML | CSS | JS | API',
+      'image':'../../assets/icons/CRM.PNG',
+      'description':'A Basketball team management with all-in-one CRM',
+      'button-one':'Github',
+      'button-two':'Live Test',
+      'linkOne': 'https://github.com/pasa2002/Simple-CRM',
+      'linkTwo':'https://crm.sanjayashrestha.com/login'
     }
   ]
 
