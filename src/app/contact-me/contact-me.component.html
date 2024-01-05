@@ -17,7 +17,13 @@
     </div>
 
     <div class="right-side">
-      <form #myForm (submit)="sendMail($event)" [formGroup]="form">
+      <form #myForm
+      action="https://formspree.io/f/mleqeajl"
+      method="POST"
+      [formGroup]="form"
+      (submit)="sendMail($event)"
+      >
+
         <div>
           <div *ngIf="name.invalid && name.touched" class="error">
             Name is required.

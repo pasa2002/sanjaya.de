@@ -18,6 +18,7 @@ export class ContactMeComponent implements OnInit{
   sendMailBtnElement: any;
   showPopup: boolean = false;
 
+
     form: FormGroup;
     constructor(private fb: FormBuilder){};
 
@@ -35,45 +36,31 @@ export class ContactMeComponent implements OnInit{
     sendMail(event: Event) {
       event.preventDefault();
 
-      const nameFieldElement = document.querySelector('.contact-me input[placeholder="Your name"]') as HTMLInputElement;
-      const messageFieldElement = document.querySelector('.contact-me textarea[placeholder="Your message"]') as HTMLTextAreaElement;
-      const mailFieldElement = document.querySelector('.contact-me input[placeholder="Your email"]') as HTMLInputElement;
-      const sendMailBtnElement = document.querySelector('.contact-me button') as HTMLButtonElement;
-
-      if (nameFieldElement) nameFieldElement.setAttribute('disabled', 'true');
-      if (messageFieldElement) messageFieldElement.setAttribute('disabled', 'true');
-      if (mailFieldElement) mailFieldElement.setAttribute('disabled', 'true');
-      if (sendMailBtnElement) sendMailBtnElement.setAttribute('disabled', 'true');
-
-      let fd = new FormData();
-      if (nameFieldElement && nameFieldElement.value) fd.append('name', nameFieldElement.value);
-      if (messageFieldElement && messageFieldElement.value) fd.append('message', messageFieldElement.value);
-      if (mailFieldElement && mailFieldElement.value) fd.append('mail', mailFieldElement.value);
-
-      fetch('https://sanjayashrestha.com/send_mail/send_mail.php', {
+      // Disable the form
+      this.form.disable();
+      const serverEndpoint = 'https://formspree.io/f/mleqeajl';
+      fetch(serverEndpoint, {
         method: 'POST',
-        body: fd
-      })  .then(response => {
-        if (response.ok) {
-          this.showPopup = true;
-          setTimeout(() => {
-            this.showPopup = false;
-          }, 1500);
-
-          // Re-enable fields and button
-          if (nameFieldElement) nameFieldElement.removeAttribute('disabled');
-          if (messageFieldElement) messageFieldElement.removeAttribute('disabled');
-          if (mailFieldElement) mailFieldElement.removeAttribute('disabled');
-          // if (sendMailBtnElement) sendMailBtnElement.removeAttribute('disabled');
-
-          nameFieldElement.value = '';
-          messageFieldElement.value = '';
-          mailFieldElement.value = '';
-        }
+        body: JSON.stringify(this.form.value),
+        headers: { 'Content-Type': 'application/json' },
       })
-      .catch(error => {
-        console.error('Error sending mail:', error);
-      });
+        .then((response) => {
+          if (response.ok) {
+            this.showPopup = true;
+            setTimeout(() => {
+              this.showPopup = false;
+              // Reset the form after successful submission
+              this.form.reset();
+              // Re-enable the form
+              this.form.enable();
+            }, 1500);
+          }
+        })
+        .catch((error) => {
+          console.error('Error sending mail:', error);
+          // Re-enable the form in case of an error
+          this.form.enable();
+        });
     }
 
 }
