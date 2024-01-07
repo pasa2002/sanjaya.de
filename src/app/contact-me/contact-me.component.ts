@@ -54,7 +54,7 @@ export class ContactMeComponent implements OnInit{
               // Re-enable the form
               this.form.enable();
             }, 1500);
-          }
+          } 
         })
         .catch((error) => {
           console.error('Error sending mail:', error);

@@ -56,24 +56,25 @@ export class SkillsComponent {
   ngAfterViewInit() {
     this.checkScroll();
   }
-  @ViewChild('skillsSection') skillsSection: ElementRef;
+
+  @ViewChild('skillsSection', { static: false }) skillsSection: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event){
-  this.checkScroll()
+  onScroll(event) {
+    this.checkScroll();
   }
 
-
-  private checkScroll(){
-    if(this.hasAnimated) return;
+  private checkScroll() {
+    if (this.hasAnimated) {
+      return;
+    }
 
     const rect = this.skillsSection.nativeElement.getBoundingClientRect();
-    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-    if(rect.top + rect.height < windowHeight-10){
+    if (rect.top + rect.height < windowHeight) {
       this.skillsSection.nativeElement.classList.add('animate');
       this.hasAnimated = true;
     }
   }
-
 }
