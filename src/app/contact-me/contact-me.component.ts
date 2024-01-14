@@ -38,7 +38,7 @@ export class ContactMeComponent implements OnInit{
 
       // Disable the form
       this.form.disable();
-      const serverEndpoint = 'https://formspree.io/f/mleqeajl';
+      const serverEndpoint = 'https://formspree.io/f/meqyokwk';
       fetch(serverEndpoint, {
         method: 'POST',
         body: JSON.stringify(this.form.value),
@@ -54,7 +54,7 @@ export class ContactMeComponent implements OnInit{
               // Re-enable the form
               this.form.enable();
             }, 1500);
-          } 
+          }
         })
         .catch((error) => {
           console.error('Error sending mail:', error);
