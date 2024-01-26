@@ -53,7 +53,7 @@ export class ContactMeComponent implements OnInit{
               this.form.reset();
               // Re-enable the form
               this.form.enable();
-            }, 1500);
+            }, 700);
           }
         })
         .catch((error) => {
